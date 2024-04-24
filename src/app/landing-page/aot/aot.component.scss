@@ -1,0 +1,75 @@
+@import "../../../styles.scss";
+$overpass: "Overpass", sans-serif;
+
+h1 {
+  font-family: "Syne", sans-serif;
+  font-size: 128px;
+  font-weight: 800;
+}
+
+h2 {
+  font-family: "Overpass", sans-serif;
+  color: #5987ff;
+  font-size: 48px;
+  font-weight: 700;
+  text-align: right;
+  &::before {
+    content: "";
+    display: inline-block;
+    position: relative;
+    background-color: black;
+    width: 600px;
+    height: 3px;
+    text-align: center;
+    margin: 0 8px 16px 0;
+  }
+}
+
+section {
+  width: 100%;
+  height: calc(100vh - 100px);
+  @include d-flex($fd: column, $g: 40px);
+  .headline {
+    text-align: center;
+  }
+  .scroll-down {
+    @include d-flex($jc: space-between);
+    width: 90%;
+    font-family: $overpass;
+    font-size: 23px;
+    font-weight: 300;
+    .email-link {
+      display: flex;
+      position: relative;
+      a {
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.scroll-arrow {
+  @include d-flex($fd: column, $jc: space-between, $g: 6px);
+  height: 100%;
+  div {
+    position: relative;
+    @include d-flex();
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    img {
+        position: absolute;
+        animation: arrow-animation 1s infinite;
+    }
+  }
+}
+
+@keyframes arrow-animation {
+    from {
+        bottom: 196px;
+    }
+    to {
+        bottom: -96px;
+    }
+}

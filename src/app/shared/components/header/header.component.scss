@@ -1,0 +1,17 @@
+@import '../../../../styles.scss';
+
+header {
+    
+    @include d-flex($jc: space-between);
+    font-family: "Syne", sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    padding: 32px 64px;
+    span {
+        cursor: pointer;
+    }
+    img {
+        cursor: pointer;
+        height: 32px;
+    }
+}

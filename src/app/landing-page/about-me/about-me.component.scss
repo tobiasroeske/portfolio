@@ -1,0 +1,57 @@
+@import '../../../styles.scss';
+
+h1 {
+    font-family: "Syne", sans-serif;
+    font-size: 78px;
+    font-weight: 800;
+}
+
+section {
+    @include d-flex();
+    margin-top: 80px;
+    div {
+        @include d-flex($fd: column, $ai: flex-start, $g: 52px);
+        width: 90%;
+        .content {
+            @include d-flex($jc: space-between, $ai: flex-start);
+            font-size: 23px;
+            font-family: "Overpass", sans-serif;
+            width: 100%;
+            .left {
+                @include d-flex($fd:column, $ai: flex-start, $jc: flex-start, $g: 52px);
+                
+                .btn {
+                    align-self: center;
+                }
+            }
+            .image-container {
+                @include d-flex($jc: flex-end);
+                width: 50%;
+                height: auto;
+                position: relative;
+                .frame {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    border: 4px solid black;
+                    top: 16px;
+                    left: 16px;
+                    opacity: 0;
+                    transition: opacity 0.125s ease-in-out;
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: auto;
+                    background-color: #CED0CF;
+                }
+                
+            }
+            
+        }
+    }
+    
+}

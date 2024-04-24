@@ -27,7 +27,8 @@ h2 {
 
 section {
   width: 100%;
-  height: calc(100vh - 100px);
+  height: 100vh;
+  padding-top: 64px;
   @include d-flex($fd: column, $g: 40px);
   .headline {
     text-align: center;

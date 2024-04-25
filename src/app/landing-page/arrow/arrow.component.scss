@@ -12,18 +12,40 @@ section {
       position: absolute;
       top: 0;
       right: 0;
-      transition: top 0.250s ease-in-out, right 0.250s ease-in-out;
+      //transition: top 0.250s ease-in-out, right 0.250s ease-in-out;
     }
     .arrow-shaft {
       position: absolute;
       background-color: black;
       width: 80px;
       height: 4px;
-      transform: rotate(-45deg);
       top: 70px;
       right: 32px;
-      transition: top 0.125s ease-in-out, right 0.125s ease-in-out;
+      //transition: top 0.125s ease-in-out, right 0.125s ease-in-out;
     }
+  }
+}
+
+[data-aos="arrow-animation"] {
+  top: 0;
+  right: 0;
+  transition-property: top, right;
+
+  &.aos-animate {
+    top: 53px !important;
+    right: 53px !important;
+  }
+}
+
+[data-aos="shaft-animation"] {
+  top: 70px;
+  right: 32px;
+  transform: rotate(-45deg);
+  transition-property: transform, top, right;
+
+  &.aos-animate {
+    top: 120px !important;
+    right: 82px !important;
   }
 }
 
@@ -33,7 +55,6 @@ section {
 }
 
 .start-shaft {
-    top: 120px !important;
-    right: 82px !important;
+  top: 120px !important;
+  right: 82px !important;
 }
-

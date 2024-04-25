@@ -1,0 +1,44 @@
+@import '../../../styles.scss';
+
+h1 {
+    font-family: 'Syne', sans-serif;
+    display: block;
+    font-size: 78px;
+    font-weight: 800;
+    z-index: 20;
+    background-color: #FFFCF3;
+    padding: 0 16px;
+    &:hover {
+        color: #5987ff;
+    }
+}
+
+section {
+    @include d-flex();
+    padding-top: 80px;
+    .container {
+        @include d-flex($fd: column);
+        width: 90%;
+        height: 600px;
+        .skill-container {
+            box-sizing: border-box;
+            padding: 161px 141px 141px 141px;
+            border: 4px solid black;
+            width: 100%;
+            margin-top: -45px;
+            @include d-flex($jc: center, $g: 78px);
+            flex-wrap: wrap;
+            .singleSkill {
+                @include d-flex($fd:column, $g: 10px);
+                font-family: 'Overpass', sans-serif;
+                font-size: 16px;
+                font-weight: 700;
+                .icon {
+                    width: 75px;
+                    height: 75px;
+                }
+            }
+            
+        }
+    }
+}

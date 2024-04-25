@@ -1,15 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
-
 @Component({
-  selector: 'app-arrow',
+  selector: 'app-arrow-left',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './arrow.component.html',
-  styleUrl: './arrow.component.scss', 
+  templateUrl: './arrow-left.component.html',
+  styleUrl: './arrow-left.component.scss'
 })
-export class ArrowComponent {
+export class ArrowLeftComponent {
   animate:boolean = false;
   animationOver = false;
 
@@ -20,4 +19,3 @@ export class ArrowComponent {
     },250)
   }
 }
-

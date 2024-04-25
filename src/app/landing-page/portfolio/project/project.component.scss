@@ -1,0 +1,80 @@
+@import "../../../../styles.scss";
+
+section {
+  @include d-flex();
+  .container {
+    @include d-flex($g: 32px, $jc: space-between);
+    width: 100%;
+  }
+}
+
+.left {
+  filter: grayscale(1);
+  width: 50%;
+  max-width: 500px;
+  align-self: flex-end;
+  position: relative;
+  .preview-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .frame {
+    border: 4px solid black;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.225s ease-in-out;
+    &:hover {
+        opacity: 1;
+    }
+  }
+}
+
+[data-aos="color-animation"] {
+  filter: grayscale(1);
+  transition-property: filter;
+
+  &.aos-animate {
+    filter: grayscale(0);
+  }
+}
+
+.right {
+  width: 50%;
+  @include d-flex($fd: column);
+  span {
+    font-family: "Syne", sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    align-self: flex-end;
+  }
+
+  .description {
+    @include d-flex($fd: column, $ai: flex-start, $g: 16px);
+    h2 {
+      font-family: "Syne", sans-serif;
+      font-size: 48px;
+      font-weight: 800;
+    }
+    .technologies {
+      color: #5987ff;
+      font-size: 23px;
+      font-family: "overpass", sans-serif;
+    }
+    p {
+      font-family: "overpass", sans-serif;
+      font-size: 16px;
+    }
+    .buttons {
+      @include d-flex($g: 24px);
+    }
+  }
+}
+
+.row-reverse {
+    flex-direction: row-reverse !important;
+}

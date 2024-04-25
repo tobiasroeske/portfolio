@@ -1,0 +1,13 @@
+<section>
+    <div class="portfolio">
+        <div class="headline">
+            <h1>Portfolio</h1>
+            <span>Sieh dir ein paar meiner Projekte an und probiere sie aus, um meine Fähigkeiten zu testen.</span>
+        </div>
+        <div class="projects">
+            @for (project of projects; track project; let i = $index) {
+                <app-project [project]=project [index]='i + 1' [amount]="projects.length"></app-project>
+            }
+        </div>
+    </div>
+</section>

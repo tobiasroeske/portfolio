@@ -10,9 +10,7 @@ import { Component, HostBinding, Input } from '@angular/core';
   styleUrl: './arrow.component.scss', 
 })
 export class ArrowComponent {
-  @Input()
-  @HostBinding('component-type')
-  componentType:String='type-default'
+  @Input() left:boolean = false;
   animate:boolean = false;
   animationOver = false;
 

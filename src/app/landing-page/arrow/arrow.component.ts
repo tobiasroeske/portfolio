@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostBinding, Input } from '@angular/core';
 
 
 @Component({
@@ -10,6 +10,9 @@ import { Component } from '@angular/core';
   styleUrl: './arrow.component.scss', 
 })
 export class ArrowComponent {
+  @Input()
+  @HostBinding('component-type')
+  componentType:String='type-default'
   animate:boolean = false;
   animationOver = false;
 

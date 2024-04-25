@@ -1,7 +1,14 @@
 @import "../../../styles.scss";
 
+:host([type-default]) {
+  transform: scale(1);
+}
+:host([type-left]) {
+  transform: scale(-1, 1)
+}
 
 section {
+  
   @include d-flex();
   margin-top: 80px;
   div {

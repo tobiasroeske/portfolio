@@ -13,6 +13,6 @@ export class ProjectComponent {
   @Input() project!: Project;
   @Input() index!:number;
   @Input() amount!: number;
-  @Input() reverse: string = 'fade-left'
+  @Input() reverse: boolean = false;
   
 }

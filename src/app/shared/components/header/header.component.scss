@@ -23,3 +23,19 @@ header {
         height: 32px;
     }
 }
+
+.menu {
+    margin-top: 100px;
+    height: calc(100vh - 100px);
+    
+    @include d-flex($fd: column);
+    h1 {
+        font-family: "Syne", sans-serif;
+        font-size: 96px;
+        font-weight: 700;
+        line-height: 96px;
+    }
+    .top {
+        @include d-flex($fd: column);
+    }
+}

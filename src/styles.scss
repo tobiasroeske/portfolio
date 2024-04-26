@@ -14,12 +14,18 @@
 
 html {
   scroll-behavior: smooth;
+  // -ms-overflow-style: none;  /* IE and Edge */
+  // scrollbar-width: none;  /* Firefox */
 }
 
+// html::-webkit-scrollbar {
+//   display: none;
+// }
+
 body {
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
+  // max-width: 1440px;
+  // margin-left: auto;
+  // margin-right: auto;
   background-color: #FFFCF3;
 }
 

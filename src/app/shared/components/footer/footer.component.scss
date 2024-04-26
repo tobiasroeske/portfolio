@@ -1,0 +1,50 @@
+@import "../../../../styles.scss";
+
+footer {
+  @include d-flex();
+  background-color: black;
+  padding-bottom: 32px;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  a {
+    color: #fffcf3;
+    align-self: flex-end;
+    font-family: 'Overpass', sans-serif;
+  }
+}
+
+.container {
+  @include d-flex($fd: column);
+  width: 90%;
+  margin-top: 32px;
+  
+  >div {
+    @include d-flex($jc: space-between);
+    width: 100%;
+  }
+}
+
+.left {
+  color: white;
+  @include d-flex($fd: column, $ai: flex-start, $g: 16px);
+  a {
+    align-self: flex-start;
+    color: white;
+    font-family: "Syne", sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+  }
+  span {
+    color: #fffcf3;
+    font-family: "Overpass", sans-serif;
+    font-size: 23px;
+  }
+}
+
+.right {
+  @include d-flex($jc: flex-end);
+  >div {
+    @include d-flex($g: 24px);
+  }
+}

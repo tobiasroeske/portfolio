@@ -1,6 +1,6 @@
 <section [ngClass]="{'mirror': left}">
     <div>
-        <img data-aos="arrow-animation" data-aos-delay="50" data-aos-duration="1000" (click)="startAnimation()" [ngClass]="{'start-arrow': animate}" class="arrow-short" src="assets/icons/arrow_short.png" alt="">
-        <div data-aos="shaft-animation" data-aos-delay="500" data-aos-duration="1000" [ngClass]="{'start-shaft': animationOver}" class="arrow-shaft"></div>
+        <img data-aos="arrow-animation" data-aos-delay="50" data-aos-duration="1000" data-aos-offset="200"  [ngClass]="{'start-arrow': animate}" class="arrow-short" src="assets/icons/arrow_short.png" alt="">
+        <div data-aos="shaft-animation" data-aos-delay="500" data-aos-duration="1000" data-aos-offset="200" [ngClass]="{'start-shaft': animationOver}" class="arrow-shaft"></div>
     </div>
 </section>

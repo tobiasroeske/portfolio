@@ -8,6 +8,7 @@ section {
   
   @include d-flex();
   margin-top: 32px;
+  padding-bottom: 16px;
   div {
     @include d-flex($jc: flex-end);
     width: 70%;

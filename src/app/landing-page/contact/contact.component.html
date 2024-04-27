@@ -1,38 +1,48 @@
-<section (click)="hideLabel()">
+<section>
     <div class="seperator"></div>
     <div class="container">
 
-        <div data-aos="fade-right" data-aos-duration="1200" data-aos-offset="-200" class="say-hi">
+        <div data-aos="fade-right" data-aos-duration="1000" data-aos-offset="400" class="say-hi">
             <h1>Say Hi!</h1>
         </div>
         <div class="form-container">
             <h3>Du möchtest über ein neues Projekt sprechen?</h3>
             <span>Sag hallo! Lass uns deine Ideen besprechen und sie verwirklichen</span>
-            <form>
+            <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                 <div class="input-container">
-                    <label  for="name">Dein Name</label>
-                    <input type="text" id="name" name="name" placeholder="Dein Name">
+                    <label hidden for="name">Dein Name</label>
+                    <input data-aos="fade-left" data-aos-duration="700" data-aos-offset="200" #name="ngModel" [(ngModel)]="contactData.name" #nameInput type="text" id="name" name="name" placeholder="Dein Name" required minlength="3">
                 </div>
-
+                @if (!name.valid && contactForm.submitted) {
+                    <span class="alert">Bitte gib mindestens 3 Buchstaben ein</span>
+                }
                 <div class="input-container">
                     <label hidden for="email">Deine Email</label>
-                    <input type="email" id="email" name="email" placeholder="Deine Email">
+                    <input data-aos="fade-right" data-aos-duration="700" data-aos-offset="200"data-aos-delay="200" #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="Deine Email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
                 </div>
-
-                <div class="input-container">
+                @if (!email.valid && contactForm.submitted) {
+                    <span class="alert">Bitte gib eine gütlige Emailadresse ein</span>
+                }
+                <div class="textarea-container">
                     <label hidden for="message">Deine Nachricht</label>
-                    <textarea name="message" id="message" cols="50" rows="10" placeholder="Deine Nachricht"></textarea>
+                    <textarea data-aos="fade-left" data-aos-duration="700" data-aos-offset="200" data-aos-delay="200" #message="ngModel" [(ngModel)]="contactData.message" name="message" id="message" cols="50" rows="10" placeholder="Deine Nachricht" required minlength="4"></textarea>
                 </div>
+                @if (!message.valid && contactForm.submitted) {
+                    <span class="alert">Bitte gib eine Nachricht mit mindestens 4 Zeichen ein</span>
+                }
                 <div class="checkbox-container">
                     <label for="privacy">Ich stimme der Erhebung, Verarbeitung und Nutzung meiner personenbezogenen
                         Daten
                         gemäß den <a href="#">Datenschutzrichtlinien</a> zu.</label>
-                    <input name="privacy" id="privacy" type="checkbox">
+                    <input #checkbox="ngModel" [(ngModel)]="contactData.checked" name="privacy" id="privacy" type="checkbox" required>
                 </div>
-
-
+                @if (!checkbox.valid && contactForm.submitted) {
+                    <span class="alert">Bitte stimme den Datenschutzrichtlinien zu, indem du das Kästchen ankreuzst. Danke!</span>
+                }
+                <input data-aos="fade-up" data-aos-duration="700" #submit type="submit" value="Nachricht senden" [ngClass]="{'disabled-btn': !contactForm.valid}">
 
             </form>
+            
         </div>
     </div>
 </section>

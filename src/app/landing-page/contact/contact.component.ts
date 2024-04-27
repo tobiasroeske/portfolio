@@ -1,25 +1,27 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
-  labelHidden:boolean = true;
 
-  showLabel() {
-    this.labelHidden = false;
+  contactData = {
+    name: '',
+    email: '',
+    message: '',
+    checked: false
   }
-
-  hideLabel() {
-    this.labelHidden = true;
-  }
-
-  stopPropagation(event:Event) {
-    event.stopPropagation();
+ 
+  onSubmit(ngForm: NgForm) {
+    if (ngForm.valid && ngForm.submitted) {
+      console.log(this.contactData);
+    }
+    
   }
 }

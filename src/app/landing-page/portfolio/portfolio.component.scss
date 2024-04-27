@@ -10,7 +10,7 @@ h1 {
 }
 
 section {
-    padding-top: 48px;
+    padding-top: 80px;
     @include d-flex();
     .portfolio {
         width: 90%;
@@ -20,7 +20,6 @@ section {
             span {
                 font-family: 'overpass', sans-serif;
                 font-size: 23px;
-
             }
         }
         .projects {

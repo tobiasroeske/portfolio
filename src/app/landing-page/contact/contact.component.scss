@@ -75,6 +75,7 @@ input {
     top: -9px;
     left: 24px;
     font-size: 16px;
+    
 }
 
 input:focus, textarea:focus {
@@ -83,6 +84,8 @@ input:focus, textarea:focus {
     color: #fffcf3;
     outline: #fffcf3;
 }
+
+
 
 input:focus::placeholder, textarea:focus::placeholder {
     color: transparent;

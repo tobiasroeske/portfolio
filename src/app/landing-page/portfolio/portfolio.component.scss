@@ -28,3 +28,20 @@ section {
         }
     }
 }
+
+@media (max-width: 430px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    section {
+        .portfolio {
+            width: 90%;
+            .headline {
+                span {
+                    width: 90%;
+                }
+            }
+        }
+    }
+}

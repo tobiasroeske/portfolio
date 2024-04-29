@@ -6,6 +6,7 @@ h1 {
   font-weight: 800;
   color: black;
   transition: color 0.225s ease-in-out;
+
   &:hover {
     color: #5987ff;
   }
@@ -14,30 +15,38 @@ h1 {
 section {
   @include d-flex();
   padding-top: 96px;
-  div {
+
+  >div {
     @include d-flex($fd: column, $ai: flex-start, $g: 52px);
+
     width: 90%;
+
     .content {
-      @include d-flex($jc: space-between, $ai: flex-start);
+
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
       font-size: 23px;
       font-family: "Overpass", sans-serif;
       width: 100%;
+
       .left {
-        @include d-flex(
-          $fd: column,
+        @include d-flex($fd: column,
           $ai: flex-start,
           $jc: flex-start,
-          $g: 52px
-        );
+          $g: 52px);
+
         a {
           align-self: center;
         }
       }
+
       .image-container {
         @include d-flex($jc: flex-end);
         width: 50%;
         height: auto;
         position: relative;
+
         .frame {
           position: absolute;
           width: 100%;
@@ -47,10 +56,12 @@ section {
           left: 16px;
           opacity: 0;
           transition: opacity 0.225s ease-in-out;
+
           &:hover {
             opacity: 1;
           }
         }
+
         img {
           object-fit: cover;
           width: 100%;
@@ -59,5 +70,42 @@ section {
         }
       }
     }
+  }
+}
+
+@media (max-width: 430px) {
+  section {
+    >div {
+      width: 80%;
+
+      .content {
+        flex-direction: column;
+        align-items: center;
+        gap: 64px;
+
+        .image-container {
+          width: 100%;
+          align-self: center;
+        }
+      }
+    }
+
+  }
+
+  h1 {
+    font-size: 38px;
+    text-align: center;
+  }
+
+
+
+  .btn {
+    display: none;
+  }
+}
+
+@media (min-width: 430) {
+  h1 {
+    font-size: 48px;
   }
 }

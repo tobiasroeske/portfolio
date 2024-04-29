@@ -173,11 +173,11 @@ input[type="submit"] {
   background-color: #000;
   color: #fffcf3;
   transition: padding 0.125s ease-in-out;
-  &:hover:enabled {
+  &:hover {
     padding: 20px 80px;
     font-weight: 700;
   }
-  &:active:enabled {
+  &:active {
     background-color: #fffcf3;
     color: black ;
   }
@@ -223,5 +223,60 @@ h1 {
 .alert {
   color: #5987ff;
   font-size: 16px;
+}
+
+@media (max-width: 430px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  section {
+    .container {
+      padding-top: 32px;
+      overflow: hidden;
+
+      .say-hi {
+        align-self: center;
+      }
+    }
+  }
+
+  .form-container {
+    max-width: 90%;
+
+    h3 {
+      font-size: 23px;
+    }
+
+    span {
+      font-size: 18px;
+    }
+  }
+
+  .checkbox-container {
+    font-size: 18px;
+  }
+
+  input[type="submit"] {
+    padding: 12px 8px;
+    &:hover {
+      font-weight: 400;
+      padding: 12px 8px;
+    }
+    &:active {
+      padding: 12px 8px;
+    }
+  }
+
+  .disabled-btn {
+    padding: 12px 8x !important;
+    &:hover {
+      padding: 12px 8px !important;
+    }
+    &:active {
+      padding: 12px 8px !important;
+    }
+  }
+
 }
 

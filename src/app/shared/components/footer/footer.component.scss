@@ -105,3 +105,28 @@ footer {
   }
 
 }
+
+@media (max-width: 430px) {
+  footer {
+    padding-top: 16px;
+    .link {
+      align-self: center;
+    }
+  }
+
+  .container {
+    gap: 8px;
+    >div {
+      flex-direction: column-reverse;
+      gap: 16px;
+    }
+  }
+
+  .left {
+    justify-content: center;
+    align-items: center;
+    a {
+      align-self: center;
+    }
+  }
+}

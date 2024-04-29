@@ -23,3 +23,13 @@ header {
         height: 32px;
     }
 }
+
+.d-none {
+    display: none;
+}
+
+@media (min-width: 320px) {
+    header {
+        padding: 30px 25px;
+    }
+}

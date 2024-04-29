@@ -3,7 +3,7 @@
         <h1>My skills</h1>
         <div class="skill-container">
             @for (skill of skills; track skill; let i = $index) {
-                <div class="singleSkill" (mouseenter)="startAnimation(i)">
+                <div class="single-skill" (mouseenter)="startAnimation(i)">
                     <img [ngClass]="{'animate': skills[i].animate}" src="assets/icons/{{ skill.path }}" alt="" class="icon">
                     <span>{{ skill.name }}</span>
                 </div>

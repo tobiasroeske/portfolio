@@ -65,4 +65,12 @@ section {
   right: 82px !important;
 }
 
+@media (max-width: 430px) {
+  .mirror {
+    transform: scale(-1, 1) translateX(32px);
+  }
+}
+
+
+
 

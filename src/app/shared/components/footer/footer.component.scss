@@ -7,18 +7,41 @@ footer {
   max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
-  a {
+
+  .link {
     color: #fffcf3;
     align-self: flex-end;
     font-family: 'Overpass', sans-serif;
+    position: relative;
+
+    &:after {
+      content: '';
+      background-color: #5987ff;
+      display: flex;
+      justify-content: flex-end;
+      height: 2px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      opacity: 0;
+    }
+    &:hover:after {
+      animation: link-animation 0.25s 1 forwards ease-in-out;
+    }
   }
+}
+
+.link:hover:after {
+  left: 0;
+  right: unset;
+  width: 50%;
 }
 
 .container {
   @include d-flex($fd: column);
   width: 90%;
   margin-top: 32px;
-  
+
   >div {
     @include d-flex($jc: space-between);
     width: 100%;
@@ -28,6 +51,7 @@ footer {
 .left {
   color: white;
   @include d-flex($fd: column, $ai: flex-start, $g: 16px);
+
   a {
     align-self: flex-start;
     color: white;
@@ -35,6 +59,7 @@ footer {
     font-size: 30px;
     font-weight: 800;
   }
+
   span {
     color: #fffcf3;
     font-family: "Overpass", sans-serif;
@@ -43,8 +68,40 @@ footer {
 }
 
 .right {
-  @include d-flex($jc: flex-end);
+  @include d-flex($jc: flex-end, $ai: flex-end);
+
   >div {
     @include d-flex($g: 24px);
+    >a {
+      transform: translate(0, 0);
+      transition: transform 0.25s ease-in-out;
+      &:hover {
+        transform: translate(0, -16px);
+      }
+    }
   }
+}
+
+@keyframes link-animation {
+  0% {
+    left: 0;
+    width: 2%;
+    right: unset;
+    opacity: 0;
+  }
+
+  50% {
+    left: 0;
+    width: 100%;
+    right: 0;
+    opacity: 1;
+  }
+
+  100% {
+    left: unset;
+    width: 50%;
+    right: 0;
+    opacity: 1;
+  }
+
 }

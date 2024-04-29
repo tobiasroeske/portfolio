@@ -18,7 +18,7 @@ export class PortfolioComponent {
       img_path: 'screenshot_join.png',
       description: 'Einfaches Kanban-Tool für Projektmanagement. Erstelle, organisiere und verwalte Aufgaben auf einem übersichtlichen Board und verschiebe sie per Drag & Drop.',
       github: '#',
-      project: '#'
+      project: 'https://join.tobias-roeske.ch'
     },
     {
       name: 'Sharkie',
@@ -26,7 +26,7 @@ export class PortfolioComponent {
       img_path: 'screenshot_sharkie.png',
       description: 'Erlebe mit Sharkie, dem Hai, ein actiongeladenes Jump-and-Run-Spiel! Besiege Quallen, Kugelfische und einen Killerwal in diesem auf OOP basierten Abenteuer.',
       github: '#',
-      project: '#'
+      project: 'https://sharkie.tobias-roeske.ch'
     },
     {
       name: 'Pokedex',
@@ -34,7 +34,7 @@ export class PortfolioComponent {
       img_path: 'screenshot_pokedex.png',
       description: 'Dieses Projekt nutzt die PokeApi, um umfassende Informationen über Pokémon abzurufen. Mit Such- und Filterfunktionen kannst du gezielt nach Pokémon suchen und detaillierte Daten anzeigen lassen.',
       github: '#',
-      project: '#'
+      project: 'https://pokedex.tobias-roeske.ch'
     }
   ]
 }

@@ -6,7 +6,7 @@ import { Subject } from 'rxjs';
 })
 export class HeaderServiceService {
   headerDropDownState$ = new Subject();
-  stateOfDropDown = false;
+  stateOfDropDown = true;
 
   constructor() {
     this.headerDropDownState$.subscribe(value => {

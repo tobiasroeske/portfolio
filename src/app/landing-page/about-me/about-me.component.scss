@@ -6,6 +6,9 @@ h1 {
   font-weight: 800;
   color: black;
   transition: color 0.225s ease-in-out;
+  @media (max-width: 850px) {
+    font-size: 56px;
+  }
 
   &:hover {
     color: #5987ff;
@@ -20,7 +23,10 @@ section {
     @include d-flex($fd: column, $ai: flex-start, $g: 52px);
 
     width: 90%;
-
+    @media (max-width: 850px) {
+      width: 80%;
+      align-items: center;
+    }
     .content {
 
       display: flex;
@@ -30,6 +36,11 @@ section {
       font-size: 23px;
       font-family: "Overpass", sans-serif;
       width: 100%;
+      @media (max-width: 850px) {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
 
       .left {
         @include d-flex($fd: column,
@@ -37,11 +48,20 @@ section {
           $jc: flex-start,
           $g: 52px);
           max-width: calc(66% - 48px);
+          @media (max-width: 850px) {
+            max-width: 100%;
+          }
         >div {
           line-height: 32px;
+          @media (max-width:850px) {
+            text-align: center;
+          }
         }
         a {
           align-self: center;
+          @media (max-width: 850px) {
+            display: none;
+          }
         }
       }
 
@@ -50,6 +70,9 @@ section {
         width: 50%;
         height: auto;
         position: relative;
+        @media (max-width: 850px) {
+          width: 90%;
+        }
 
         .frame {
           position: absolute;
@@ -88,6 +111,9 @@ section {
         gap: 64px;
         .left {
           max-width: 100%;
+          @media (max-width: 975px) {
+            max-width: calc(55% - 48px);
+          }
         }
         .image-container {
           width: 100%;

@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { HeaderServiceService } from '../../shared/services/header-service/header-service.service';
+import { TranslateService } from '../../shared/services/translate-service/translate.service';
 
 @Component({
   selector: 'app-dropdown-menu',
@@ -10,16 +11,15 @@ import { HeaderServiceService } from '../../shared/services/header-service/heade
 })
 export class DropdownMenuComponent {
   headerDropDownService = inject(HeaderServiceService);
+  translateService = inject(TranslateService);
   animate:boolean = false;
-  startAnimation() {
-    this.animate = true;
-  }
-
-  stopAnimation() {
-    this.animate = false;
-  }
+  
 
   closeDropDownMenu() {
     this.headerDropDownService.headerDropDownState$.next(false);
+  }
+
+  translatePage() {
+    this.translateService.stateOfTranslation$.next(true);
   }
 }

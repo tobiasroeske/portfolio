@@ -14,7 +14,11 @@
                     <div class="technologies">
                         {{ project.technologies }}
                     </div>
-                    <p>{{ project.description }}</p>
+                    @if (!translateService.translated) {
+                        <p>{{ project.description }}</p>
+                    } @else {
+                        <p>{{ project.description_english }}</p>
+                    }
                     <div class="buttons">
                         <a href="{{ project.github }}" target="_blank"><button class="btn">Github</button></a>
                         <a href="{{ project.project }}" target="_blank"><button class="btn">Live Test</button></a>
@@ -29,7 +33,11 @@
                     <div class="technologies">
                         {{ project.technologies }}
                     </div>
-                    <p>{{ project.description }}</p>
+                    @if (!translateService.translated) {
+                        <p>{{ project.description }}</p>
+                    } @else {
+                        <p>{{ project.description_english }}</p>
+                    }
                     <div class="buttons">
                         <a href="{{ project.github }}" target="_blank"><button class="btn">Github</button></a>
                         <a href="{{ project.project }}" target="_blank"><button class="btn">Live Test</button></a>

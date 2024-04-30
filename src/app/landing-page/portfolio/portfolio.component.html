@@ -2,7 +2,11 @@
     <div class="portfolio">
         <div class="headline">
             <h1>Portfolio</h1>
-            <span>Sieh dir ein paar meiner Projekte an und probiere sie aus, um meine Fähigkeiten zu testen.</span>
+            @if (!translateService.translated) {
+                <span>Sieh dir ein paar meiner Projekte an und probiere sie aus, um meine Fähigkeiten zu testen.</span>
+            } @else {
+                <span>Take a look at some of my projects and try them out to test my skills.</span>
+            }
         </div>
         <div class="projects">
             @for (project of projects; track project; let i = $index) {

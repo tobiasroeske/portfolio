@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, Input, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { TranslateService } from '../../shared/services/translate-service/translate.service';
 
 @Component({
   selector: 'app-contact',
@@ -12,6 +13,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 })
 export class ContactComponent {
   http = inject(HttpClient);
+  translateService = inject(TranslateService);
 
   mailSend = false;
   mailTest = false;

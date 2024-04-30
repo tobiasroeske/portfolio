@@ -7,6 +7,9 @@ h1 {
     &:hover {
         color: #5987ff;
     }
+    @media (max-width:850px) {
+        font-size: 56px;
+    }
 }
 
 section {
@@ -15,11 +18,17 @@ section {
     .portfolio {
         width: 90%;
         @include d-flex($fd: column);
+        @media (max-width:850px) {
+            width: 80%;
+        }
         .headline {
             @include d-flex($fd: column, $g:40px);
             span {
                 font-family: 'overpass', sans-serif;
                 font-size: 23px;
+                @media (max-width:850px) {
+                    text-align: center;
+                }
             }
         }
         .projects {

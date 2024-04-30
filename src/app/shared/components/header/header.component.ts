@@ -14,6 +14,5 @@ export class HeaderComponent {
 
   toggleDropDown() {
     this.headerDropDownService.headerDropDownState$.next(true);
-    console.log(this.headerDropDownService.stateOfDropDown);
   }
 }

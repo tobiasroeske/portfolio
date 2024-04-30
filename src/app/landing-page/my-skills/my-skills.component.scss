@@ -11,6 +11,9 @@ h1 {
   &:hover {
     color: #5987ff;
   }
+  @media (max-width:850px) {
+    font-size: 56px;
+  }
 }
 
 section {
@@ -20,6 +23,9 @@ section {
   .container {
     @include d-flex($fd: column);
     width: 90%;
+    @media (max-width:850px) {
+      width: 80%;
+    }
     .skill-container {
       box-sizing: border-box;
       padding: 161px 141px 141px 141px;
@@ -28,6 +34,13 @@ section {
       margin-top: -45px;
       @include d-flex($jc: center, $g: 78px);
       flex-wrap: wrap;
+      @media (max-width:850px) {
+        padding: 120px 80px;
+        margin-top: -32px;
+      }
+      @media (max-width: 650px) {
+        padding: 80px 48px;
+      }
       .single-skill {
         @include d-flex($fd: column, $g: 10px);
         font-family: "Overpass", sans-serif;

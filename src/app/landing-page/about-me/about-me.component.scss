@@ -26,6 +26,7 @@ section {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
+      gap: 48px;
       font-size: 23px;
       font-family: "Overpass", sans-serif;
       width: 100%;
@@ -35,7 +36,10 @@ section {
           $ai: flex-start,
           $jc: flex-start,
           $g: 52px);
-
+          max-width: calc(66% - 48px);
+        >div {
+          line-height: 32px;
+        }
         a {
           align-self: center;
         }
@@ -82,7 +86,9 @@ section {
         flex-direction: column;
         align-items: center;
         gap: 64px;
-
+        .left {
+          max-width: 100%;
+        }
         .image-container {
           width: 100%;
           align-self: center;

@@ -25,7 +25,7 @@
                     <label hidden for="email">Deine Email</label>
                     <input data-aos="fade-right" data-aos-duration="700" data-aos-offset="200" data-aos-delay="200"
                         #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email"
-                        placeholder="Deine Email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                        placeholder="Deine Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
                 </div>
                 @if (!email.valid && contactForm.submitted) {
                 <span class="alert">Bitte gib eine gütlige Emailadresse ein</span>
@@ -42,7 +42,7 @@
                 <div class="checkbox-container">
                     <label for="privacy">Ich stimme der Erhebung, Verarbeitung und Nutzung meiner personenbezogenen
                         Daten
-                        gemäß den <a href="#">Datenschutzrichtlinien</a> zu.</label>
+                        gemäß den <a href="datenschutz" target="_blank">Datenschutzrichtlinien</a> zu.</label>
                     <input #checkbox="ngModel" [(ngModel)]="contactData.checked" name="privacy" id="privacy"
                         type="checkbox" required>
                 </div>
@@ -96,7 +96,7 @@
                 <span class="alert">Please enter a message with at least 4 letters.</span>
                 }
                 <div class="checkbox-container">
-                    <label for="privacy">I agree to the collection, processing, and use of my personal data in accordance with the <a href="#">privacy policy</a>.</label>
+                    <label for="privacy">I agree to the collection, processing, and use of my personal data in accordance with the <a href="datenschutz" target="_blank">privacy policy</a>.</label>
                     <input #checkbox="ngModel" [(ngModel)]="contactData.checked" name="privacy" id="privacy"
                         type="checkbox" required>
                 </div>

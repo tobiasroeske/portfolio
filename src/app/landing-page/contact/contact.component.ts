@@ -48,7 +48,6 @@ export class ContactComponent {
             console.error(error);
           },
           complete: () => {
-            console.info('send post complete')
             setTimeout(() => this.mailSend = false, 3000)
           },
         });

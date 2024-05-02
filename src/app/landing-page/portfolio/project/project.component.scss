@@ -6,7 +6,7 @@ section {
     overflow: hidden;
   }
   .container {
-    @include d-flex($g: 32px, $jc: space-between);
+    @include d-flex($g: 48px, $jc: space-between);
     width: 100%;
     &:hover .frame {
       opacity: 1;
@@ -35,6 +35,12 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    @media (max-width: 850px) {
+      width: 95%;
+    }
+    @media (max-width:505px) {
+      width: 90%;
+    }
   }
   .frame {
     display: flex;
@@ -47,6 +53,12 @@ section {
     height: 100%;
     opacity: 0;
     transition: opacity 0.225s ease-in-out;
+    @media (max-width:850px) {
+      width: 95%;
+    }
+    @media (max-width:505px) {
+      width: 90%;
+    }
     >img {
       position: absolute;
       right: -34px;
@@ -89,11 +101,20 @@ section {
       font-family: "Syne", sans-serif;
       font-size: 48px;
       font-weight: 800;
+      @media (max-width: 1100px) {
+        font-size: 40px;
+      }
+      @media (max-width: 580px) {
+        font-size: 32px;
+      }
     }
     .technologies {
       color: #5987ff;
       font-size: 23px;
       font-family: "overpass", sans-serif;
+      @media (max-width: 1100px) {
+        font-size: 20px;
+      }
     }
     p {
       font-family: "overpass", sans-serif;
@@ -114,6 +135,15 @@ section {
             padding: 20px 40px;
           }
         }
+        @media (max-width: 580px) {
+          padding: 16px 24px;
+          &:hover {
+            padding: 16px 32px;
+          }
+          &:active {
+            padding: 16px 32px;
+          }
+        }
       }
     }
   }
@@ -128,7 +158,6 @@ section {
 
 @media (max-width: 430px) {
   
-
   section {
     overflow: hidden;
     box-sizing: border-box;
@@ -166,26 +195,28 @@ section {
       h2 {
         font-size: 28px;
       }
-    }
-    .buttons {
-      gap: 4px;
-      width: 100%;
-      >a {
-        width: 50%;;
-      }
-      .btn {
-        padding: 12px 8px;
-        font-size: 18px;
+      .buttons {
+        gap: 4px;
+        width: 100%;
+        justify-content: space-around;
+        >a {
+          .btn {
+            padding: 12px 8px;
+            font-size: 18px;
+            
+            &:hover {
+              padding: 12px 12px;
+              font-weight: 400;
+            }
+            &:active {
+              padding: 12px 12px;
+              font-weight: 400;
+            }
+          }
+        }
         
-        &:hover {
-          padding: 12px 8px;
-          font-weight: 400;
-        }
-        &:active {
-          padding: 12px 8px;
-          font-weight: 400;
-        }
       }
     }
+    
   }
 }

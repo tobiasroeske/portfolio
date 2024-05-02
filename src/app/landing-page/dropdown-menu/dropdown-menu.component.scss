@@ -13,6 +13,12 @@ section {
       font-family: "Syne", sans-serif;
       font-size: 80px;
       font-weight: 700;
+      @media (max-width: 1100px) {
+        font-size: 68px;
+      }
+      @media (max-width:660px) {
+        font-size: 56px;
+      }
     }
     .top {
       @include d-flex($fd: column, $g: 64px);
@@ -34,6 +40,12 @@ section {
   width: 100%;
   padding: 200px 0 24px 0;
   margin-top: -224px;
+  @media (max-width:1100px) {
+    margin-top: -200px;
+  }
+  @media (max-width: 660px) {
+    margin-top: -192px;
+  }
   div {
     @include d-flex($jc: space-between);
     width: 90%;
@@ -44,6 +56,15 @@ section {
       h1 {
         font-weight: 800;
         font-size: 96px;
+        @media (max-width: 1100px) {
+          font-size: 78px;
+        }
+        @media (max-width: 660px) {
+          font-size: 64px;
+        }
+        @media (max-width: 540px) {
+          font-size: 56px;
+        }
         &:hover {
           color: #5987ff;
         }
@@ -68,6 +89,18 @@ section {
   position: relative;
   width: 40vw;
   max-width: 500px;
+  @media (max-width: 930px) {
+    width: 55vh;
+    max-width: 55vh;
+  }
+  @media (max-width: 660px) {
+    width: 40vh;
+    max-width: 40vh;
+  }
+  @media (max-width: 540px) {
+    max-width: 35vh;
+    width: 35vh;
+  }
   div {
     border-left: 4px solid black;
     position: absolute;

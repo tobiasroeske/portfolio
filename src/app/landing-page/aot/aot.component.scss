@@ -11,6 +11,12 @@ h1 {
   @media (max-width: 850px) {
     font-size: 64px;
   }
+  @media (max-width: 580px) {
+    font-size: 56px;
+  }
+  @media (max-width: 505px) {
+    font-size: 44px;
+  }
 }
 
 h2 {
@@ -21,6 +27,12 @@ h2 {
   text-align: right;
   @media (max-width: 850px) {
     font-size: 32px;
+  }
+  @media (max-width: 580px) {
+    font-size: 28px;
+  }
+  @media (max-width:505px) {
+    font-size: 23px;
   }
   &::before {
     content: "";
@@ -36,6 +48,14 @@ h2 {
     }
     @media (max-width:850px) {
       width: 250px;
+      margin: 0 8px 8px 0;
+    }
+    @media (max-width:580px) {
+      width: 232px;
+    }
+    @media (max-width: 505px) {
+      width: 172px;
+      margin: 0 8px 6px 0;
     }
     }
 }

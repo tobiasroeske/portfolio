@@ -17,6 +17,7 @@ export class DropdownMenuComponent {
 
   closeDropDownMenu() {
     this.headerDropDownService.headerDropDownState$.next(false);
+    this.headerDropDownService.headerAnimations$.next(false);
   }
 
   translatePage() {

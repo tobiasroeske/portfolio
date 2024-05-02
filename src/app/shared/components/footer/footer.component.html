@@ -2,17 +2,22 @@
     <div class="container">
         <div>
             <div class="left">
-                <a href="#aot">[TR]</a>
+                <a href="#aot"><img src="assets/img/logo-dark.png" alt="" class="logo"></a>
                 <span>&copy; Tobias Roeske 2024</span>
             </div>
             <div class="right">
                 <div>
-                    <a href="#" target="_blank"><img src="assets/icons/github.png" alt=""></a>
-                    <a href="#" target="_blank"><img src="assets/icons/email.png" alt=""></a>
-                    <a href="#" target="_blank"><img src="assets/icons/linkedIn.png" alt=""></a>
+                    <a href="https://github.com/tobiasroeske" target="_blank"><img src="assets/icons/github.png" alt=""></a>
+                    <a href="mailto:info@tobias-roeske.com" target="_blank"><img src="assets/icons/email.png" alt=""></a>
+                    <a href="https://www.linkedin.com/in/tobias-roeske-53034b307/" target="_blank"><img src="assets/icons/linkedIn.png" alt=""></a>
                 </div>
             </div>
         </div>
-        <a class="link" href="impressum" target="_blank">Impressum</a>
+        @if (!translateService.translated) {
+            <a href="impressum" class="link" target="_blank">Impressum</a>
+        } @else {
+            <a href="impressum" class="link" target="_blank">Imprint</a>
+        }
+        
     </div>
 </footer>

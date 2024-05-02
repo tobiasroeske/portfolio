@@ -43,7 +43,7 @@ footer {
   margin-top: 32px;
 
   >div {
-    @include d-flex($jc: space-between);
+    @include d-flex($jc: space-between, $ai: flex-start);
     width: 100%;
   }
 }
@@ -54,10 +54,12 @@ footer {
 
   a {
     align-self: flex-start;
-    color: white;
-    font-family: "Syne", sans-serif;
-    font-size: 30px;
-    font-weight: 800;
+  }
+
+  .logo {
+    cursor: pointer;
+    width: 64px;
+    height: 64px;
   }
 
   span {
@@ -118,6 +120,7 @@ footer {
     gap: 8px;
     >div {
       flex-direction: column-reverse;
+      align-items: center;
       gap: 16px;
     }
   }

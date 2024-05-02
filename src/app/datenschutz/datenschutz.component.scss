@@ -1,0 +1,61 @@
+@import '../../styles.scss';
+
+section {
+    @include d-flex();
+    margin-top: 160px;
+    font-family: 'Overpass', sans-serif;
+    margin-bottom: 80px;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+    h1 {
+        font-size: 48px;
+        font-family: 'Syne', sans-serif;
+        font-weight: 800;
+        padding: 24px 0;
+        &:hover {
+            color: #5987ff;
+        }
+        @media (max-width:630px) {
+            font-size: 36px;
+        }
+        @media (max-width: 460px) {
+            font-size: 27px;
+        }
+        @media (max-width: 360px) {
+            font-size: 24px;
+        }
+    }
+
+    h2 {
+        font-size: 28px;
+        padding: 16px 0;
+        @media (max-width: 630px) {
+            font-size: 23px;
+        }
+        @media (max-width: 460px) {
+            font-size: 20px;
+        }
+    }
+
+    h3 {
+        font-size: 23px;
+        padding: 14px 0;
+        @media (max-width: 630px) {
+            font-size: 20px;
+        }
+        @media (max-width: 460px) {
+            font-size: 18px;
+        }
+    }
+
+    a {
+        text-decoration: underline;
+        &:hover {
+            color:#5987ff;
+        }
+    }
+}
+.container {
+    width: 80%;
+}

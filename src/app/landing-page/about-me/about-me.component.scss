@@ -9,7 +9,13 @@ h1 {
   @media (max-width: 850px) {
     font-size: 56px;
   }
-
+  @media (max-width: 580px) {
+    font-size: 48px;
+  }
+  @media (max-width: 505px) {
+    font-size: 40px;
+  }
+ 
   &:hover {
     color: #5987ff;
   }
@@ -27,6 +33,7 @@ section {
       width: 80%;
       align-items: center;
     }
+    
     .content {
 
       display: flex;
@@ -48,6 +55,9 @@ section {
           $jc: flex-start,
           $g: 52px);
           max-width: calc(66% - 48px);
+          @media (max-width: 975px) {
+            max-width: calc(55% - 48px);
+          }
           @media (max-width: 850px) {
             max-width: 100%;
           }
@@ -111,12 +121,10 @@ section {
         gap: 64px;
         .left {
           max-width: 100%;
-          @media (max-width: 975px) {
-            max-width: calc(55% - 48px);
-          }
+          
         }
         .image-container {
-          width: 100%;
+          width: 90%;
           align-self: center;
         }
       }
@@ -136,8 +144,9 @@ section {
   }
 }
 
-@media (min-width: 430) {
-  h1 {
-    font-size: 48px;
+@media (max-width: 390px) {
+  section > div {
+    width: 90%;
   }
+  
 }

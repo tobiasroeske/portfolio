@@ -14,22 +14,89 @@ header {
     font-family: "Syne", sans-serif;
     font-size: 30px;
     font-weight: 800;
-    padding: 32px 64px;
-    span {
-        cursor: pointer;
+    padding: 18px 64px;
+    .flag-container {
+        @include d-flex($g: 16px)
     }
-    img {
+    .logo {
         cursor: pointer;
+        width: 64px;
+        height: 64px;
+    }
+    .flag {
+        cursor: pointer;
+        width: 64px;
+    }
+    .menu {
+        cursor: pointer;
+        background-image: url('../../../../assets/icons/burger_menu1.png');
+        background-size: contain;
+        background-position: center;
         height: 32px;
+        width: 40px;
     }
+    .back-icon {
+        cursor: pointer;
+        filter: brightness(0) saturate(100%) invert(69%) sepia(54%) saturate(7082%) hue-rotate(206deg) brightness(102%) contrast(101%);
+        &:hover {
+            transform: scale(1.15);
+        }
+    }
+}
+
+.change-to-close {
+    animation: change-to-close-icon-animation 0.25s 1 forwards ease-in-out;
+}
+
+.change-to-menu {
+    animation: change-to-menu-icon-animation 0.25s 1 forwards ease-in-out;
 }
 
 .d-none {
     display: none;
 }
 
-@media (min-width: 320px) {
+@keyframes change-to-menu-icon-animation {
+    0% {
+        background-image: url('../../../../assets/icons/burger_menu5.png');
+    }
+    25% {
+        background-image: url('../../../../assets/icons/burger_menu6.png');
+    }
+    50% {
+        background-image: url('../../../../assets/icons/burger_menu7.png');
+    }
+    75% {
+        background-image: url('../../../../assets/icons/burger_menu8.png');
+    }
+    100% {
+        background-image: url('../../../../assets/icons/burger_menu1.png');
+    }
+}
+
+@keyframes change-to-close-icon-animation {
+    0% {
+        background-image: url('../../../../assets/icons/burger_menu1.png');
+    }
+    20% {
+        background-image: url('../../../../assets/icons/burger_menu2.png');
+    }
+    40% {
+        background-image: url('../../../../assets/icons/burger_menu3.png');
+    }
+    60% {
+        background-image: url('../../../../assets/icons/burger_menu4.png');
+    }
+    80% {
+        background-image: url('../../../../assets/icons/burger_menu5.png');
+    }
+    100% {
+        background-image: url('../../../../assets/icons/burger_menu5.png');
+    }
+}
+
+@media (max-width: 540px) {
     header {
-        padding: 30px 25px;
+        padding: 16px 25px;
     }
 }

@@ -1,5 +1,23 @@
 <header>
-    <span>[TR]</span>
-    <img (click)="toggleDropDown()" src="assets/icons/burger_menu.png" alt="">
+    <img src="assets/img/logo.png" (click)="goToLadingPage()" class="logo">
+    @if (!headerDropDownService.onOtherPage) {
+        <div class="menu" [class.change-to-close]="headerDropDownService.closeIconAnimation" [class.change-to-menu]="headerDropDownService.menuIconAnimation" (click)="toggleDropDown(); toggleMenuIcon()"></div>
+    } @else {
+        
+        <div class="flag-container">
+           @if (pathName == '/datenschutz') {
+            <img (click)="closePage()" src="assets/icons/contact_back_arrow.png" alt="" class="back-icon">
+           } @else {
+            @if (!translateService.translated) {
+                <img (click)="toggleFlag()" src="assets/icons/flag_UK.svg" alt="" class="flag">
+            } @else {
+                <img (click)="toggleFlag()" src="assets/icons/flag_germany.svg" alt="" class="flag">
+            }
+            
+            <img (click)="closePage()" src="assets/icons/contact_back_arrow.png" alt="" class="back-icon">
+        }
+        </div>
+        
+    }
+    
 </header>
-

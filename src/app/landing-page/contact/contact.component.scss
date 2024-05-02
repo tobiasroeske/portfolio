@@ -20,6 +20,7 @@ section {
 
     .say-hi {
       align-self: flex-start;
+      overflow: hidden;
     }
   }
 }
@@ -30,6 +31,7 @@ section {
   font-family: "Overpass", sans-serif;
   font-size: 23px;
   max-width: 60%;
+  overflow: hidden;
 
   >span {
     text-align: center;
@@ -42,6 +44,9 @@ h3 {
   font-weight: 700;
   text-align: center;
   font-family: 'Overpass', sans-serif;
+  @media (max-width:580px) {
+    font-size: 28px;
+  }
 }
 
 form {
@@ -172,7 +177,7 @@ input[type="submit"] {
   font-size: 23px;
   background-color: #000;
   color: #fffcf3;
-  transition: padding 0.125s ease-in-out;
+  transition: all 0.225s ease-in-out;
   &:hover {
     padding: 20px 80px;
     font-weight: 700;
@@ -197,7 +202,7 @@ input[type="submit"] {
   font-size: 23px;
   background-color: #000;
   color: #a7a5a0 !important;
-  transition: padding 0.125s ease-in-out;
+  transition: padding 0.225s ease-in-out;
   &:hover {
     padding: 20px 60px 20px 60px !important;
     font-weight: 400 !important;
@@ -218,11 +223,53 @@ h1 {
   &:hover {
     color: #5987ff;
   }
+  @media (max-width: 850px) {
+    font-size: 56px;
+  }
+  
+  @media (max-width: 505px) {
+    font-size: 40px;
+  }
 }
 
 .alert {
   color: #5987ff;
   font-size: 16px;
+}
+
+@media (max-width: 580px) {
+  h1 {
+    font-size: 48px;
+  } 
+
+  input[type="submit"] {
+    padding: 20px 28px;
+    &:hover {
+      padding: 20px 35px;
+    }
+    &:active {
+      padding: 20px 35px;
+    }
+  }
+
+  .disabled-btn {
+    padding: 20px 28px !important;
+    &:hover {
+      padding: 20px 28px !important;
+    }
+    &:active {
+      padding: 20px 28px !important;
+    }
+  }
+
+  .form-container span {
+      font-size: 20px;
+  }
+
+  .checkbox-container {
+    font-size: 20px;
+  }
+  
 }
 
 @media (max-width: 430px) {

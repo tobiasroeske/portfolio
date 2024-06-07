@@ -32,6 +32,9 @@ section {
   .container {
     @include d-flex($fd: column);
     width: 90%;
+    max-width: 1920px; 
+    margin-left: auto;
+    margin-right: auto;
     @media (max-width:850px) {
       width: 80%;
     }
@@ -129,16 +132,14 @@ section {
   }
   section {
     margin-top: 0;
-    padding: 40px 0 0 0;
+    padding: 112px 0 0 0;
     .container {
       
       .skill-container {
         padding: 40px 32px;
         margin-top: -24px;
         gap: 48px;
-        .single-skill {
-          
-        }
+        
       }
     }
   }

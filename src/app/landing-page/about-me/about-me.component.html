@@ -1,6 +1,11 @@
 <section>
     <div>
+        @if (!translateService.translated) {
+        <h1>Über mich</h1>
+        } @else {
         <h1>About me</h1>
+        }
+
         <div class="content">
             <div class="left">
                 @if (!translateService.translated) {
@@ -25,9 +30,14 @@
                     projects, I look forward to hearing from you!
                 </div>
                 }
-
-                <a href="#contact"><button data-aos="fade-up" data-aos-duration="500" class="btn">Let's
+                @if (!translateService.translated) {
+                <a href="#contact" data-aos="fade-up" data-aos-duration="500"><button class="btn">Nachricht senden
+                        </button></a>
+                } @else {
+                <a href="#contact" data-aos="fade-up" data-aos-duration="500"><button class="btn">Let's
                         talk</button></a>
+                }
+
 
             </div>
             <div class="image-container">

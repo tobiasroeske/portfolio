@@ -66,14 +66,17 @@ section {
   padding-top: 64px;
   @include d-flex();
   .container {
-    width: 100%;
+    width: 90%;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
     @include d-flex($fd: column, $g: 40px);
     .headline {
       text-align: center;
     }
     .scroll-down {
       @include d-flex($jc: space-between);
-      width: 90%;
+      width: 100%;
       font-family: $overpass;
       font-size: 23px;
       font-weight: 300;

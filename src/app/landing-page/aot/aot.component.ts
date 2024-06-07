@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { TranslateService } from '../../shared/services/translate-service/translate.service';
 
 @Component({
   selector: 'app-aot',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './aot.component.scss'
 })
 export class AotComponent {
-
+translateService = inject(TranslateService);
 }

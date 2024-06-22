@@ -172,3 +172,9 @@ section {
       width: 55%;
     }
  }
+
+ @media (max-height: 800px) {
+  section .menu .top {
+    justify-content: flex-start;
+  }
+ }

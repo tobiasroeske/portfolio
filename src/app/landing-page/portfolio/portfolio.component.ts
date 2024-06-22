@@ -15,6 +15,15 @@ export class PortfolioComponent {
   translateService = inject(TranslateService);
   projects: Project[] = [
     {
+      name: 'DABubble',
+      technologies: 'Angular | Firebase | SCSS | TypeScript',
+      img_path: 'screenshot_dabubble.png',
+      description: 'Ein funktionsreicher Messenger, inspiriert von Slack, der durch die Leistungsfähigkeit von Firebase unterstützt wird, um eine sichere Nutzeranmeldung und eine zuverlässige Echtzeit-Datenbank zu gewährleisten.',
+      description_english: 'A feature-rich messenger inspired by Slack, powered by Firebase to ensure secure user authentication and a reliable real-time database.',
+      github: 'https://github.com/tobiasroeske/DA_Bubble',
+      project: 'https://dabubble.tobias-roeske.ch'
+    },
+    {
       name: 'Join',
       technologies: 'JavaScript | HTML | CSS | Git | Scrum',
       img_path: 'screenshot_join.png',
@@ -31,15 +40,6 @@ export class PortfolioComponent {
       description_english: 'Experience an action-packed jump-and-run game with Sharkie the shark! Defeat jellyfish, pufferfish, and a killer whale in this OOP-based adventure.',
       github: 'https://github.com/tobiasroeske/sharkie',
       project: 'https://sharkie.tobias-roeske.ch'
-    },
-    {
-      name: 'Pokedex',
-      technologies: 'JavaScript | HTML | CSS | Bootstrap | REST-API',
-      img_path: 'screenshot_pokedex.png',
-      description: 'Dieses Projekt nutzt die PokeApi, um umfassende Informationen über Pokémon abzurufen. Mit Such- und Filterfunktionen kannst du gezielt nach Pokémon suchen und detaillierte Daten anzeigen lassen.',
-      description_english: 'This project utilizes the PokeAPI to retrieve comprehensive information about Pokémon. With search and filter functionalities, you can specifically search for Pokémon and display detailed data.',
-      github: 'https://github.com/tobiasroeske/pokedex',
-      project: 'https://pokedex.tobias-roeske.ch'
     }
   ]
 }

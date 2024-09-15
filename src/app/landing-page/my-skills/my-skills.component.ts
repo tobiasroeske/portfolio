@@ -13,6 +13,7 @@ export class MySkillsComponent {
 
   skills = [
     {name: 'Angular', path: 'angular.png', animate: false},
+    {name: 'React', path: 'react.png', animate: false},
     {name: 'TypeScript', path: 'ts.png', animate: false},
     {name: 'JavaScript', path: 'javascript.png', animate: false},
     {name: 'HTML', path: 'html.png', animate: false},
